@@ -19,3 +19,5 @@ Basic To do List using react functional components.
 - Add changes on that branch
 - Commit changes 
 - Push to the repo
+
+###DO NOT PUSH TO THE MAIN BRANCH
