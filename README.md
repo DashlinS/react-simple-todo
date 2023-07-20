@@ -14,6 +14,8 @@ Basic To do List using react functional components.
 ## Starting the project
 - Clone repo
 - Create branch with your name as the branch name
+- npm install
+- npm start
 - Add changes on that branch
 - Commit changes 
 - Push to the repo
