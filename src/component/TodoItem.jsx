@@ -1,7 +1,7 @@
-function TodoItem({listItem, index, todoList, listItems}){
-              console.log(todoList)
+import { BsFillTrashFill } from "react-icons/bs"
+
+function TodoItem({listItem, setTodoList, currTodoList, index}){
   return (
-    <>
       <li onDoubleClick={(e) => {
         if(e.target.style["text-decoration"] === "none"){
           e.target.style["text-decoration"] = "line-through"
@@ -9,10 +9,14 @@ function TodoItem({listItem, index, todoList, listItems}){
           e.target.style["text-decoration"] = "none"
         }
         }}
-        >
-          {listItem}
+      >{listItem}
+      <span>{"  "}</span>
+      <BsFillTrashFill onClick={() => {
+        setTodoList(
+          currTodoList.filter((li, num) => index !== num)
+        );
+      }}/>    
       </li>
-    </>
   )
 }
 

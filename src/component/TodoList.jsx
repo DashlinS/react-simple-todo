@@ -1,5 +1,4 @@
 import TodoItem from "./TodoItem"
-import { BsFillTrashFill } from "react-icons/bs"
 import { v4 as uuidv4 } from 'uuid';
 
 function TodoList({currTodoList, setTodoList}){
@@ -11,14 +10,7 @@ function TodoList({currTodoList, setTodoList}){
             .toUpperCase()
             .concat(listItem.slice(1));
           return (
-            <>
-              <TodoItem key={uuidv4()} listItem={listItem} index={index} />
-              <BsFillTrashFill onClick={() => {
-                setTodoList(
-                  currTodoList.filter((li, num) => index !== num)
-                );
-              }}/>
-            </>
+            <TodoItem key={uuidv4()} listItem={listItem} setTodoList={setTodoList} currTodoList={currTodoList} index={index}/>
           )
         })}
       </div>
