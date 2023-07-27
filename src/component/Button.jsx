@@ -1,17 +1,15 @@
-import React from 'react'
-
-function Button({todoList, inputValue, setTodoList, setInputValue}) {
+function Button({todoList, setTodoList, value, setValue}) {
   return (
   <button
-      onClick={(e) => {
-        e.preventDefault();
-        todoList.push(inputValue);
-        setTodoList(todoList);
-        setInputValue('');
-      }}
-    >
-      Add Item
-    </button>
+    onClick={(e) => {
+      e.preventDefault();
+      todoList.push(value);
+      setTodoList(todoList);
+      setValue('');
+    }}
+  >
+    Add Item
+  </button>
   )
 }
 

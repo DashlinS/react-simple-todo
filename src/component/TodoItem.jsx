@@ -1,7 +1,5 @@
-import { BsFillTrashFill } from "react-icons/bs"
-import TodoList from "./TodoList";
-
-function TodoItem({listItem, index, updateList, listItems}){
+function TodoItem({listItem, index, todoList, listItems}){
+              console.log(todoList)
   return (
     <>
       <li onDoubleClick={(e) => {
@@ -13,11 +11,6 @@ function TodoItem({listItem, index, updateList, listItems}){
         }}
         >
           {listItem}
-          <BsFillTrashFill onClick={() => {
-            updateList(
-              TodoList.filter((li, num) => index !== num)
-            );
-          }}/>
       </li>
     </>
   )
