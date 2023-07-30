@@ -2,7 +2,7 @@ import { BsFillTrashFill } from "react-icons/bs"
 
 function TodoItem({listItem, setTodoList, currTodoList, index}){
   return (
-      <li onDoubleClick={(e) => {
+      <li className="listItem" onDoubleClick={(e) => {
         if(e.target.style["text-decoration"] === "none"){
           e.target.style["text-decoration"] = "line-through"
         }else {

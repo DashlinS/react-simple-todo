@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 function TodoList({currTodoList, setTodoList}){
   return (
-      <div>
+      <div className="listItemContainer">
         {currTodoList.map((listItem, index) => {
           listItem = listItem
             .slice(listItem[0], 1)

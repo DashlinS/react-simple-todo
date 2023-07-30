@@ -11,3 +11,61 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: 768px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.mainContainer {
+  width: 600px;
+  max-height: 600px;
+  text-align: center;
+}
+
+.toDoTitle {
+  font-size: 3em;
+}
+
+.labelText {
+  font-size: 2em;
+
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input {
+  width: 200px;
+  height: 20px;
+  margin: 20px;
+}
+
+form button {
+  width: 100px;
+  height: 30px;
+  font-size: 1em;
+}
+
+.listItem {
+  width: 100px;
+  font-size: 1.3em;
+  margin-bottom: 20px;
+   
+}
+ a:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.listItemContainer {
+  display: flex;
+  align-items: center ;
+  margin-top: 20px;
+  flex-direction: column;
+}

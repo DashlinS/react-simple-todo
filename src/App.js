@@ -11,23 +11,27 @@ function App() {
   return (
     <>
       <div className="container">
-        <Header />
-        <form>
-          <label htmlFor="toDoList">Add Item</label>
-          <Input
-            value={inputValue}
-            handleOnChange={(e) => setInputValue(e.target.value)}
-          />
-          <Button
-            todoList={todoList}
-            setTodoList={setTodoList}
-            value={inputValue}
-            setValue={setInputValue}
-          />
-        </form>
-        <ul>
-          <TodoList currTodoList={todoList} setTodoList={setTodoList} />
-        </ul>
+        <main className="mainContainer">
+          <Header />
+          <form>
+            <label htmlFor="toDoList" className="labelText">
+              Add Item
+            </label>
+            <Input
+              value={inputValue}
+              handleOnChange={(e) => setInputValue(e.target.value)}
+            />
+            <Button
+              todoList={todoList}
+              setTodoList={setTodoList}
+              value={inputValue}
+              setValue={setInputValue}
+            />
+          </form>
+          <ul>
+            <TodoList currTodoList={todoList} setTodoList={setTodoList} />
+          </ul>
+        </main>
       </div>
     </>
   );
