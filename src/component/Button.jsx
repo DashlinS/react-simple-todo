@@ -3,14 +3,12 @@ function Button({todoList, setTodoList, value, setValue}) {
   <button
     onClick={(e) => {
       e.preventDefault();
-        if(value === '') {
-        window.alert('Please Enter an item')
+        if(!value || todoList.includes(value)) {
+          return;
       }
-      else{
       todoList.push(value);
       setTodoList(todoList);
       setValue('');
-      }
     }}
   >
     Add Item
